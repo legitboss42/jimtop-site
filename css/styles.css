@@ -548,3 +548,75 @@ h4{ font-size: 1rem; }
   .service-hero{ grid-template-columns: 1fr; }
   .hero-media img{ height:240px; }
 }
+
+/* CONTACT FORM — FIXED GRID LAYOUT */
+.contact-card .form{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+  margin-top: 12px;
+}
+
+.contact-card .field{
+  display:grid;
+  gap: 8px;
+  width:100%;
+}
+
+.contact-card .field span{
+  font-weight: 800;
+  color: rgba(234,240,255,.92);
+}
+
+.contact-card input,
+.contact-card select,
+.contact-card textarea{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.22);
+  color: var(--text);
+  outline:none;
+}
+
+.contact-card textarea{
+  resize: vertical;
+  min-height: 160px;
+  grid-column: span 2; /* makes Project Details full width */
+}
+
+.contact-card input:focus,
+.contact-card select:focus,
+.contact-card textarea:focus{
+  border-color: rgba(35,240,199,.45);
+  box-shadow: 0 0 0 3px rgba(35,240,199,.12);
+}
+
+/* Budget should align nicely */
+.contact-card .field:last-of-type{
+  grid-column: span 1;
+}
+
+/* Make the button + tip full width */
+.contact-card button.btn{
+  grid-column: span 2;
+  margin-top: 0 !important;
+}
+
+.contact-card .form p.muted{
+  grid-column: span 2;
+  margin-top: 0 !important;
+}
+
+/* Mobile: single column */
+@media (max-width: 760px){
+  .contact-card .form{
+    grid-template-columns: 1fr;
+  }
+  .contact-card textarea,
+  .contact-card button.btn,
+  .contact-card .form p.muted{
+    grid-column: auto;
+  }
+}
