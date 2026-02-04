@@ -189,6 +189,21 @@ h4{ font-size: 1rem; }
 .hero{
   padding: var(--gap-7) 0 var(--gap-6); /* 56px -> 44px */
   position:relative;
+  overflow:hidden;
+  z-index:0;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(7,10,18,.82), rgba(7,10,18,.90)),
+    url("../images/hero-tech.png") center/cover no-repeat;
+  z-index:-1;
+}
+.hero > .container{
+  position:relative;
+  z-index:1;
 }
 .page-hero{
   padding: var(--gap-6) 0 var(--gap-5);
@@ -300,6 +315,42 @@ h4{ font-size: 1rem; }
   border: 1px solid rgba(255,255,255,.10);
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
   box-shadow: var(--shadow2);
+}
+
+/* PNG images - clean, consistent */
+.card-img{
+  width:100%;
+  height:130px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:12px;
+  opacity:.92;
+  border: 1px solid rgba(255,255,255,.10);
+}
+.section-img{
+  width:100%;
+  height:auto;
+  border-radius:22px;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow2);
+}
+.contact-card{
+  position:relative;
+  overflow:hidden;
+}
+.contact-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(7,10,18,.90), rgba(7,10,18,.94)),
+    url("../images/networking.png") center/cover no-repeat;
+  opacity:.45;
+  z-index:0;
+}
+.contact-card > *{
+  position:relative;
+  z-index:1;
 }
 
 .service-card{
@@ -468,3 +519,32 @@ h4{ font-size: 1rem; }
    UTIL: hide/show
    ========================= */
 .hidden{ display:none !important; }
+
+/* Service hero image (consistent across pages) */
+.service-hero{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: var(--gap-5);
+  align-items:center;
+}
+
+.hero-media{
+  border-radius: 26px;
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  box-shadow: var(--shadow2);
+}
+
+.hero-media img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+  opacity:.92;
+}
+
+@media (max-width: 980px){
+  .service-hero{ grid-template-columns: 1fr; }
+  .hero-media img{ height:240px; }
+}

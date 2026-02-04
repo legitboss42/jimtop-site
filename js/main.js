@@ -37,6 +37,8 @@
       desc:
         "Tower, mast and monopole projects delivered with safe installation, inspections, corrosion protection, and lifecycle maintenance.",
       href: "telecommunications.html",
+      img: "images/telecom.png",
+      imgAlt: "Telecommunications infrastructure",
     },
     {
       title: "Software & IT Solutions",
@@ -44,6 +46,8 @@
       desc:
         "Enterprise software, cloud solutions, web/mobile apps, and IT consultancy designed for performance, security, and scale.",
       href: "software-it.html",
+      img: "images/software-it.png",
+      imgAlt: "Enterprise software and IT systems",
     },
     {
       title: "Electronic Security",
@@ -51,6 +55,8 @@
       desc:
         "CCTV, access control, alarms and threat management with proper coverage planning, monitoring workflows and maintenance.",
       href: "electronic-security.html",
+      img: "images/cybersecurity.png",
+      imgAlt: "Electronic security systems and monitoring",
     },
     {
       title: "Electrical Engineering",
@@ -58,6 +64,8 @@
       desc:
         "Renewables, industrial/commercial installations, power equipment supply and electrical project execution built for uptime.",
       href: "electrical.html",
+      img: "images/networking.png",
+      imgAlt: "Electrical engineering and power infrastructure",
     },
     {
       title: "Mechanical Engineering",
@@ -65,6 +73,8 @@
       desc:
         "HVAC, plant engineering, equipment installation and optimization — designed to reduce downtime and operating cost.",
       href: "mechanical.html",
+      img: "images/team-site.png",
+      imgAlt: "Mechanical engineering and facility systems",
     },
     {
       title: "Cybersecurity",
@@ -72,6 +82,8 @@
       desc:
         "Network security, endpoint protection, audits and incident response — structured controls that reduce risk and improve resilience.",
       href: "cybersecurity.html",
+      img: "images/cybersecurity.png",
+      imgAlt: "Cybersecurity and risk controls",
     },
     {
       title: "Digital Transformation",
@@ -79,6 +91,8 @@
       desc:
         "Legacy modernization, cloud migration, digital platforms and BI integration to improve agility and decision-making.",
       href: "digital-transformation.html",
+      img: "images/software-it.png",
+      imgAlt: "Digital modernization and platforms",
     },
     {
       title: "Network & Connectivity",
@@ -86,6 +100,8 @@
       desc:
         "Fibre deployments, wireless, VoIP and data infrastructure designed for stable high-performance enterprise operations.",
       href: "networking.html",
+      img: "images/networking.png",
+      imgAlt: "Network and connectivity infrastructure",
     },
     {
       title: "Project Management",
@@ -93,6 +109,8 @@
       desc:
         "Planning, risk management, stakeholder coordination and reporting that keeps complex projects on time and within scope.",
       href: "project-management.html",
+      img: "images/team-site.png",
+      imgAlt: "Project management and delivery oversight",
     },
   ];
 
@@ -103,6 +121,7 @@
     grid.innerHTML = SERVICES.map(
       (s) => `
       <a class="service-card js-reveal" href="${s.href}">
+        <img class="card-img" src="${s.img}" alt="${s.imgAlt}">
         <div class="service-top">
           <div class="badge">${s.badge}</div>
           <span class="mini">Learn More →</span>
