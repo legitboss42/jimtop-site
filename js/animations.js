@@ -1,5 +1,5 @@
 ﻿/* =========================
-   JIMTOP — Animations
+   JIMTOP - Animations
    - GSAP + ScrollTrigger reveals
    - Hover micro interactions
    - Reduced-motion safe

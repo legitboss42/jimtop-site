@@ -1,5 +1,5 @@
 ﻿/* =========================
-   JIMTOP — Main JS
+   JIMTOP - Main JS
    - Mobile menu toggle
    - Footer year
    - Service cards data + render
@@ -71,7 +71,7 @@
       title: "Mechanical Engineering",
       badge: "Facilities",
       desc:
-        "HVAC, plant engineering, equipment installation and optimization — designed to reduce downtime and operating cost.",
+        "HVAC, plant engineering, equipment installation and optimization, designed to reduce downtime and operating cost.",
       href: "mechanical.html",
       img: "images/team-site.png",
       imgAlt: "Mechanical engineering and facility systems",
@@ -80,7 +80,7 @@
       title: "Cybersecurity",
       badge: "Defense",
       desc:
-        "Network security, endpoint protection, audits and incident response — structured controls that reduce risk and improve resilience.",
+        "Network security, endpoint protection, audits and incident response, structured controls that reduce risk and improve resilience.",
       href: "cybersecurity.html",
       img: "images/cybersecurity.png",
       imgAlt: "Cybersecurity and risk controls",
