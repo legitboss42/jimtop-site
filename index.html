@@ -19,7 +19,9 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">JIMTOP</a>
+      <a class="logo" href="index.html" aria-label="JIMTOP Home">
+        <img src="images/logo.png" alt="JIMTOP Nigeria Ltd logo" />
+      </a>
 
       <nav class="nav nav-desktop">
         <a href="services.html">Capabilities</a>
@@ -46,26 +48,38 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="container">
-        <p class="kicker">35+ Years • Government & Enterprise Delivery</p>
-
-        <h1>Engineering & ICT Infrastructure Built to Perform, Built to Last</h1>
-
-        <p class="subhead">
-          JIMTOP Nigeria Ltd delivers telecommunications, power, security, and digital systems for organizations that demand
-          reliability, safety, and disciplined execution (across Nigeria, Africa, and beyond).
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="services.html">Explore Capabilities</a>
-          <a class="btn ghost" href="contact.html">Start a Project</a>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-fx" aria-hidden="true">
+        <div class="fx-streaks"></div>
+        <div class="fx-nodes">
+          <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span>
+          <span class="node n4"></span><span class="node n5"></span><span class="node n6"></span>
+          <span class="node n7"></span><span class="node n8"></span><span class="node n9"></span>
         </div>
+      </div>
 
-        <div class="trust-strip">
-          <div class="trust-item">Mission-Critical Deployments</div>
-          <div class="trust-item">Multi-Discipline Delivery</div>
-          <div class="trust-item">Structured Execution</div>
-          <div class="trust-item">Lifecycle Support</div>
+      <div class="container">
+        <div class="hero-panel js-hero-panel">
+          <p class="kicker">35+ Years • Government & Enterprise Delivery</p>
+
+          <h1>Engineering & ICT Infrastructure Built to Perform, Built to Last</h1>
+
+          <p class="subhead">
+            JIMTOP Nigeria Ltd delivers telecommunications, power, security, and digital systems for organizations that demand
+            reliability, safety, and disciplined execution (across Nigeria, Africa, and beyond).
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="services.html">Explore Capabilities</a>
+            <a class="btn ghost" href="contact.html">Start a Project</a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-item">Mission-Critical Deployments</div>
+            <div class="trust-item">Multi-Discipline Delivery</div>
+            <div class="trust-item">Structured Execution</div>
+            <div class="trust-item">Lifecycle Support</div>
+          </div>
         </div>
       </div>
     </section>
@@ -241,7 +255,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom:10px">JIMTOP</div>
+        <div class="logo-text" style="margin-bottom:10px">JIMTOP</div>
         <p class="muted">Engineering and ICT infrastructure delivered with discipline, safety, and long-term reliability.</p>
       </div>
 
@@ -296,4 +310,6 @@
   <script src="js/animations.js"></script>
 </body>
 </html>
+
+
 

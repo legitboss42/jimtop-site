@@ -25,6 +25,55 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
+  // HERO PARALLAX (panel + FX)
+  if (window.ScrollTrigger) {
+    const hero = document.querySelector(".hero");
+    const heroPanel = document.querySelector(".js-hero-panel");
+    const streaks = document.querySelector(".fx-streaks");
+    const nodes = document.querySelector(".fx-nodes");
+
+    if (hero) {
+      if (heroPanel) {
+        gsap.to(heroPanel, {
+          y: 12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: hero,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      if (streaks) {
+        gsap.to(streaks, {
+          y: -18,
+          ease: "none",
+          scrollTrigger: {
+            trigger: hero,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      if (nodes) {
+        gsap.to(nodes, {
+          y: -10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: hero,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+    }
+  }
+
   // Global reveal
   const items = document.querySelectorAll(".js-reveal, .service-card, .cap-card, .bullet, .stat-card, .logo-pill");
   items.forEach((el) => {
@@ -46,10 +95,22 @@
   });
 
   // Hero micro animation
-  const hero = document.querySelector(".hero, .page-hero");
+  const hero = document.querySelector(".hero");
   if (hero) {
+    const heroItems = hero.querySelectorAll("h1, .subhead, .kicker, .hero-actions, .trust-strip");
+    gsap.from(heroItems, {
+      opacity: 0,
+      y: 18,
+      duration: 0.7,
+      stagger: 0.12,
+      ease: "power2.out",
+    });
+  }
+
+  const pageHero = document.querySelector(".page-hero");
+  if (pageHero) {
     gsap.fromTo(
-      hero.querySelectorAll("h1, .page-title, .kicker, .subhead, .page-subhead, .hero-actions, .trust-strip"),
+      pageHero.querySelectorAll(".breadcrumbs, .page-title, .page-subhead, .hero-actions, .trust-strip"),
       { opacity: 0, y: 10 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: "power2.out" }
     );
